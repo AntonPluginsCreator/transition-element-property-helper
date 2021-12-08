@@ -45,7 +45,6 @@ TransitionElementPropertyHelper(document.getElementById('div1')).showTimingFunct
 
 A function that displays a table and/or array with transition-property,
 transition-duration, transition-timing-function, and transition-delay values once
-(Browser version)
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionTable();
