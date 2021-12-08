@@ -18,30 +18,39 @@ The function that starts the transition test when the transition fires
 TransitionElementPropertyHelper(document.getElementById('div1')).start();
 ```
 
-A function that shows the transition-delay once
+A function that shows the transition-delay value once
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).showDelay();
 ```
 
-A function that shows the transition-duration once
+A function that shows the transition-duration value once
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).showDuration();
 ```
 
-A function that shows the transition-property once
+A function that shows the transition-property value once
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).showProperty();
 ```
 
 
-A function that shows the transition-timing-function once
+A function that shows the transition-timing-function value once
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).showTimingFunction();
 ```
+
+A function that displays a table and/or array with transition-property,
+transition-duration, transition-timing-function, and transition-delay values once
+(Browser version)
+
+```javascript
+TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionTable();
+```
+
 ## The result of the plugin
 ### Console
 ```
