@@ -12,7 +12,7 @@ new TransitionElementPropertyHelper(document.getElementById('div1')).start();
 
 ## Functions
 
-The function that starts the transition test when the transition fires
+The function that starts the transition test when the transition starts
 
 ```javascript
 TransitionElementPropertyHelper(document.getElementById('div1')).start();
