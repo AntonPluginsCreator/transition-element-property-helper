@@ -10,10 +10,10 @@
     function onError(typeErr){
         switch(typeErr){
             case 1:
-             console.log('Block not found!');
+             console.error('Block not found');
             break;
             default:
-             console.log('Error');
+             console.error('Error');
             break;
         }
     }
@@ -21,7 +21,7 @@
         constructor(block){
             this._block=block;
         }
-        /* The function that starts the transition test when the transition fires*/
+        /* The function that starts the transition test when the transition starts*/
         start(){
             /* An event handler that starts when the transition starts*/
             this._block.addEventListener('transitionstart',()=>{
@@ -36,7 +36,7 @@
                 }
             });
         }
-        /*A function that shows the transition-delay once*/
+        /*A function that shows the transition-delay value once*/
         showDelay(){
             if(this._block){
                 console.log("Delay: "+getComputedStyle(this._block).transitionDelay);
@@ -44,7 +44,7 @@
                 onError(1);
             }
         }
-        /*A function that shows the transition-duration once*/
+        /*A function that shows the transition-duration value once*/
         showDuration(){
             if(this._block){
                 console.log("Duration: "+getComputedStyle(this._block).transitionDuration);
@@ -52,7 +52,7 @@
                 onError(1);
             }
         }
-        /*A function that shows the transition-property once*/
+        /*A function that shows the transition-property value once*/
         showProperty(){
             if(this._block){
                 console.log("Property: "+getComputedStyle(this._block).transitionProperty);
@@ -60,10 +60,24 @@
                 onError(1);
             }
         }
-        /*A function that shows the transition-timing-function once*/
+        /*A function that shows the transition-timing-function value once*/
         showTimingFunction(){
             if(this._block){
                 console.log("Timing function: "+getComputedStyle(this._block).transitionTimingFunction);
+            }else{
+                onError(1);
+            }
+        }
+        /*A function that displays a table and/or array with transition-property,
+        transition-duration, transition-timing-function, and transition-delay values once*/
+        showTransitionTable(){
+            if(this._block){
+                console.table([{
+                    Delay:getComputedStyle(this._block).transitionDelay,
+                    Duration:getComputedStyle(this._block).transitionDuration,
+                    Property:getComputedStyle(this._block).transitionProperty,
+                    TimingFunction:getComputedStyle(this._block).transitionTimingFunction
+                }]);
             }else{
                 onError(1);
             }

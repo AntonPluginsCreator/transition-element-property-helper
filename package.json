@@ -1,6 +1,6 @@
 {
   "name": "transition-element-property-helper",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Simple plugin for test transition property for site styles. The test results appear in the console.",
   "main": "transition-element-property-helper.js",
   "scripts": {
@@ -12,9 +12,9 @@
   },
   "keywords": [
     "transition",
+    "transitions",
     "css",
     "property",
-    "helper",
     "style",
     "styles",
     "console",
@@ -23,7 +23,8 @@
     "transition-property",
     "transition-duration",
     "transition-delay",
-    "transition-timing-function"
+    "transition-timing-function",
+    "helper"
   ],
 
 
