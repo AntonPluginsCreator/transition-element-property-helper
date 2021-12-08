@@ -47,5 +47,4 @@ Delay: 0s
 Duration: 1s
 Property: transform
 Timing function: ease
-plugin.js:30 Timing function: ease
 ```
