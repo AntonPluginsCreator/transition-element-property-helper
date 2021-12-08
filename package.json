@@ -1,8 +1,8 @@
 {
   "name": "transition-element-property-helper",
-  "version": "1.0.0",
-  "description": "Simple plugin for test transition property for site styles.",
-  "main": "plugin.js",
+  "version": "1.0.1",
+  "description": "Simple plugin for test transition property for site styles. The test results appear in the console.",
+  "main": "transition-element-property-helper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,8 +22,11 @@
     "test",
     "transition-property",
     "transition-duration",
-    "transition-delay"
+    "transition-delay",
+    "transition-timing-function"
   ],
+
+
   "author": "Anton Maklakov",
   "license": "MIT",
   "bugs": {
