@@ -1,6 +1,9 @@
 # TransitionElementPropertyHelper
 Simple plugin for test transition property for site styles. The test results appear in the console.
 
+[![npm-version](https://img.shields.io/npm/v/transition-element-property-helper)](https://www.npmjs.com/package/transition-element-property-helper)
+
+
 ## Start Plugin
 
 ```javascript
