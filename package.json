@@ -1,14 +1,14 @@
 {
   "name": "transition-element-property-helper",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Simple plugin for test transition property for site styles. The test results appear in the console.",
-  "main": "transition-element-property-helper.js",
+  "main": "src/transition-element-property-helper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AntonPluginsCreator/TransitionElementPropertyHelper.git"
+    "url": "git+https://github.com/AntonPluginsCreator/transition-element-property-helper.git"
   },
   "keywords": [
     "transition",
@@ -31,7 +31,7 @@
   "author": "Anton Maklakov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AntonPluginsCreator/TransitionElementPropertyHelper/issues"
+    "url": "https://github.com/AntonPluginsCreator/transition-element-property-helper/issues"
   },
-  "homepage": "https://github.com/AntonPluginsCreator/TransitionElementPropertyHelper#readme"
+  "homepage": "https://github.com/AntonPluginsCreator/transition-element-property-helper#readme"
 }
