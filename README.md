@@ -2,7 +2,7 @@
 Simple plugin for test transition property for site styles. The test results appear in the console.
 
 [![npm-version](https://img.shields.io/npm/v/transition-element-property-helper)](https://www.npmjs.com/package/transition-element-property-helper)
-[![repo-size](https://img.shields.io/github/repo-size/AntonPluginsCreator/transition-element-property-helper)](https://github.com/AntonPluginsCreator/transition-element-property-helper.git)
+[![repo-size](https://img.shields.io/github/repo-size/AntonPluginsCreator/transition-element-property-helper)](https://github.com/AntonPluginsCreator/transition-element-property-helper)
 [![license](https://img.shields.io/npm/l/transition-element-property-helper)](https://github.com/AntonPluginsCreator/transition-element-property-helper/blob/main/LICENSE)
 
 ## Table of contents
