@@ -28,7 +28,7 @@ One minified file with all the functionality of the plugin
 ## Installation
 
 ```bash
-$ npm i transition-element-property-helper
+npm i transition-element-property-helper
 ```
 
 <div id='start-plugin'></div>
