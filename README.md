@@ -48,6 +48,12 @@ Function that starts the transition test when the transition starts
 new TransitionElementPropertyHelper(document.getElementById('div1')).start();
 ```
 
+Function that shows the transition value once
+
+```javascript
+new TransitionElementPropertyHelper(document.getElementById('div1')).showTransition();
+```
+
 Function that shows the transition-delay value once
 
 ```javascript
@@ -79,6 +85,11 @@ transition-duration, transition-timing-function, and transition-delay values onc
 ```javascript
 new TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionTable();
 ```
+Function that shows the value of the transition properties in an array once
+
+```javascript
+new TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionArray();
+```
 <div id='result-plugin'></div>
 
 ## The result of the plugin
@@ -93,8 +104,11 @@ Property: font-size, transform
 Timing function: ease-in, ease
 ```
 
-#### showProperty like functions
+#### showProperty like functions or showTransition
 
+```
+Transition: font-size 2s ease-in 0s, transform 3s ease 1s
+```
 ```
 Delay: 0s, 1s
 ```
@@ -115,6 +129,15 @@ Timing function: ease-in, ease
 | 1   |'1s' |'3s'|'transform'|'ease'|
 
 Array(2)
+
+#### showTransitionArray
+```
+(2) [{…}, {…}]
+  0: {Delay: '0s', Duration: '2s', Property: 'font-size', TimingFunction: 'ease-in'}
+  1: {Delay: '1s', Duration: '3s', Property: 'transform', TimingFunction: 'ease'}
+  length: 2
+  [[Prototype]]: Array(0)
+```
 
 <div id='license'></div>
 
