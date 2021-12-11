@@ -1,5 +1,5 @@
 /*!
- * transition-element-property-helper v1.1.0 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
+ * transition-element-property-helper v1.1.1 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
  * Copyright (c) 2021 Anton Maklakov
  * Licensed under MIT (https://github.com/AntonPluginsCreator/transition-element-property-helper/blob/main/LICENSE)
  */
