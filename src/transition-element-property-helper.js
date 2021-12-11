@@ -1,5 +1,5 @@
 /*!
- * transition-element-property-helper v1.1.1 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
+ * transition-element-property-helper v1.1.2 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
  * Copyright (c) 2021 Anton Maklakov
  * Licensed under MIT (https://github.com/AntonPluginsCreator/transition-element-property-helper/blob/main/LICENSE)
  */
@@ -30,6 +30,32 @@
     function getArray(element){
         return element.split(',');
     }
+    /*Function that gets transition data*/
+    function getData(element){
+        /*Array with all the values of the transition properties:["0s,...","1s,...","transform,...","ease,..."]*/
+        let arrayTransition=[
+            getArray(getComputedStyle(element).transitionDelay),
+            getArray(getComputedStyle(element).transitionDuration),
+            getArray(getComputedStyle(element).transitionProperty),
+            getArray(getComputedStyle(element).transitionTimingFunction)
+        ];
+        /*Array for transition data*/
+        let transitionData=[];
+        /*Transition element object template*/
+        let properties={Delay:'',Duration:'',Property:'',TimingFunction:''};
+        /*Loop for creating objects by the number of transition elements*/
+        for(let i=0;i<getLength(getComputedStyle(element).transition);i++){
+            /*Updating template values*/
+            arrayTransition.forEach((arr,index)=>{
+                properties[String(Object.keys(properties)[index])]=arr[i].replace(/ +/g, ' ').trim();
+            });
+            /*Adding an updated template to an array with transition data*/
+            transitionData.push(properties);
+            /*Template refresh*/
+            properties={Delay:'',Duration:'',Property:'',TimingFunction:''};
+        }
+        return transitionData;
+    }
     return class TransitionElementPropertyHelper{
         constructor(element){
             this._element=element;
@@ -48,6 +74,10 @@
                     onError(1);
                 }
             });
+        }
+        /*Function that shows the transition value once*/
+        showTransition(){
+            this._element ? console.log("Transition: "+getComputedStyle(this._element).transition) : onError(1);
         }
         /*Function that shows the transition-delay value once*/
         showDelay(){
@@ -68,43 +98,11 @@
         /*Function that displays a table and/or array with transition-property,
         transition-duration, transition-timing-function, and transition-delay values once*/
         showTransitionTable(){
-            if(this._element){
-                /*Сondition that is triggered if there are more than one transition elements*/
-                if(getLength(getComputedStyle(this._element).transition)>1){
-                    /*Array with all the values of the transition properties:["0s,...","1s,...","transform,...","ease,..."]*/
-                    let arrayTransition=[
-                        getArray(getComputedStyle(this._element).transitionDelay),
-                        getArray(getComputedStyle(this._element).transitionDuration),
-                        getArray(getComputedStyle(this._element).transitionProperty),
-                        getArray(getComputedStyle(this._element).transitionTimingFunction)
-                    ];
-                    /*Array for table data*/
-                    let tableData=[];
-                    /*Transition element object template*/
-                    let properties={Delay:'',Duration:'',Property:'',TimingFunction:''};
-                    /*Loop for creating objects by the number of transition elements*/
-                    for(let i=0;i<getLength(getComputedStyle(this._element).transition);i++){
-                        /*Updating template values*/
-                        arrayTransition.forEach((arr,index)=>{
-                            properties[String(Object.keys(properties)[index])]=arr[i].replace(/ +/g, ' ').trim();
-                        });
-                        /*Adding an updated template to an array with table data*/
-                        tableData.push(properties);
-                        /*Template refresh*/
-                        properties={Delay:'',Duration:'',Property:'',TimingFunction:''};
-                    }
-                    console.table(tableData);
-                }
-                else{
-                    /*Displays the table if there are one or zero transition elements*/
-                    console.table([{
-                        Delay:getComputedStyle(this._element).transitionDelay,
-                        Duration:getComputedStyle(this._element).transitionDuration,
-                        Property:getComputedStyle(this._element).transitionProperty,
-                        TimingFunction:getComputedStyle(this._element).transitionTimingFunction
-                    }])
-                }
-            }else onError(1);
+            this._element ? console.table(getData(this._element)) : onError(1);
+        }
+        /*Function that shows the value of the transition properties in an array once*/
+        showTransitionArray(){
+            this._element ? console.log(getData(this._element)) : onError(1);
         }
     }
 }));
