@@ -85,11 +85,19 @@ transition-duration, transition-timing-function, and transition-delay values onc
 ```javascript
 new TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionTable();
 ```
+
 Function that shows the value of the transition properties in an array once
 
 ```javascript
 new TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionArray();
 ```
+
+Function that shows the value of the transition properties in a JSON string once
+
+```javascript
+new TransitionElementPropertyHelper(document.getElementById('div1')).showTransitionJSON();
+```
+
 <div id='result-plugin'></div>
 
 ## The result of the plugin
@@ -137,6 +145,12 @@ Array(2)
   1: {Delay: '1s', Duration: '3s', Property: 'transform', TimingFunction: 'ease'}
   length: 2
   [[Prototype]]: Array(0)
+```
+
+#### showTransitionJSON
+```
+[{"Delay":"0s","Duration":"2s","Property":"font-size","TimingFunction":"ease-in"},
+{"Delay":"1s","Duration":"3s","Property":"transform","TimingFunction":"ease"}]
 ```
 
 <div id='license'></div>
