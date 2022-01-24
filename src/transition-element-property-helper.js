@@ -1,6 +1,6 @@
 /*!
- * transition-element-property-helper v1.1.2 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
- * Copyright (c) 2021 Anton Maklakov
+ * transition-element-property-helper v1.1.3 (https://github.com/AntonPluginsCreator/transition-element-property-helper)
+ * Copyright (c) 2021-2022 Anton Maklakov
  * Licensed under MIT (https://github.com/AntonPluginsCreator/transition-element-property-helper/blob/main/LICENSE)
  */
 (function (root, factory) {
@@ -103,6 +103,10 @@
         /*Function that shows the value of the transition properties in an array once*/
         showTransitionArray(){
             this._element ? console.log(getData(this._element)) : onError(1);
+        }
+        /*Function that shows the value of the transition properties in a JSON string once*/
+        showTransitionJSON(){
+            this._element ? console.log(JSON.stringify(getData(this._element))) : onError(1);
         }
     }
 }));
